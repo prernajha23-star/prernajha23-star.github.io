@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prerna Jha | Product Manager & Data Analyst</title>
+    <meta
+      name="description"
+      content="Portfolio of Prerna Jha — product strategy, data analytics, and business impact."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #0f172a;
+        --card: #0b1220;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+        --accent-2: #22c55e;
+        --border: #1f2937;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+          Arial, sans-serif;
+        background: radial-gradient(1200px 800px at 10% -10%, #1e293b, #0b1020 60%)
+          no-repeat;
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 20px 80px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 16px 0 40px;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.4px;
+      }
+
+      nav {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      nav a:hover {
+        color: var(--text);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 32px;
+        align-items: center;
+        padding: 30px 0 60px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(56, 189, 248, 0.15);
+        color: var(--accent);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        margin: 18px 0 16px;
+        line-height: 1.1;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: 17px;
+        margin-bottom: 24px;
+      }
+
+      .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 18px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .btn.primary {
+        background: var(--accent);
+        color: #0b1220;
+      }
+
+      .btn.secondary {
+        border-color: var(--border);
+        color: var(--text);
+      }
+
+      .hero-card {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px;
+      }
+
+      .hero-card p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      section {
+        margin-top: 60px;
+      }
+
+      .section-title {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
+
+      .section-subtitle {
+        color: var(--muted);
+        margin-bottom: 24px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .card {
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        background: rgba(148, 163, 184, 0.2);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .timeline-item {
+        border-left: 2px solid var(--accent-2);
+        padding-left: 16px;
+      }
+
+      .timeline-item h4 {
+        margin: 0 0 6px;
+      }
+
+      footer {
+        margin-top: 80px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+
+      @media (max-width: 720px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">Prerna Jha</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#case-studies">Case Studies</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div>
+          <span class="badge">Product Manager • Data Analyst</span>
+          <h1>
+            Product Manager and Data Analyst driving data-informed growth, experimentation, and
+            strategic decision-making.
+          </h1>
+          <p class="lead">
+            8+ years across product management and analytics, with experience scaling consumer
+            platforms to 10M+ users. Currently pursuing an M.S. in Business Analytics at Purdue
+            University.
+          </p>
+          <div class="cta">
+            <a
+              class="btn primary"
+              href="PRERNA_JHA_RESUME%20_PM%20-Jan%2026%20(2).pdf"
+              target="_blank"
+              rel="noreferrer"
+              >View Resume</a
+            >
+            <a class="btn secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Focus Areas</h3>
+          <p>
+            Product discovery, user research, KPI design, pricing strategy, cohort analysis,
+            experimentation, and stakeholder alignment.
+          </p>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2 class="section-title">About</h2>
+        <p class="section-subtitle">
+          Product and analytics professional focused on translating complex data into clear
+          business insights, predictive systems, and strategic recommendations.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Impact Metrics</h3>
+            <p>Scaled products to 10M+ users through analytics, experimentation, and growth work.</p>
+          </div>
+          <div class="card">
+            <h3>Tools & Methods</h3>
+            <p>SQL, Python, ML modeling, experimentation, cohort analysis, product analytics.</p>
+          </div>
+          <div class="card">
+            <h3>Industry Exposure</h3>
+            <p>Gaming, consumer platforms, and enterprise analytics.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="case-studies">
+        <h2 class="section-title">Case Studies</h2>
+        <p class="section-subtitle">
+          Outcome-driven projects that show how I approach product strategy and data analysis.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <h3>Predictive Financial Risk Modeling</h3>
+            <p>
+              Built ML models (LightGBM, XGBoost) to assess firm-level risk with emphasis on
+              validation and business interpretability.
+            </p>
+            <p>
+              <a href="https://github.com/prernajha23-star/predictive-financial-risk-modeling"
+                >View project →</a
+              >
+            </p>
+          </article>
+          <article class="card">
+            <h3>Enterprise Data Forecasting & Strategy</h3>
+            <p>
+              Used SQL-driven analytics and forecasting to support strategic planning and
+              executive decision support.
+            </p>
+            <p>
+              <a href="https://github.com/prernajha23-star/enterprise-data-forecasting-strategy"
+                >View project →</a
+              >
+            </p>
+          </article>
+          <article class="card">
+            <h3>Technology Adoption Product Strategy</h3>
+            <p>
+              Case-based analysis of Google Glass and Apple Newton to assess market fit and
+              adoption barriers.
+            </p>
+            <p>
+              <a href="https://github.com/prernajha23-star/technology-adoption-product-strategy"
+                >View project →</a
+              >
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Analytics & Product Portfolio</h3>
+            <p>
+              Overview of applied analytics and product strategy projects across ML, forecasting,
+              and market analysis.
+            </p>
+            <p>
+              <a href="https://github.com/prernajha23-star/prerna-jha-portfolio"
+                >View portfolio →</a
+              >
+            </p>
+          </div>
+          <div class="card">
+            <h3>Predictive Risk Notebook</h3>
+            <p>Jupyter-based modeling workflow using structured financial data.</p>
+            <p>
+              <a href="https://github.com/prernajha23-star/predictive-financial-risk-modeling"
+                >View notebooks →</a
+              >
+            </p>
+          </div>
+          <div class="card">
+            <h3>Forecasting & Strategy Assets</h3>
+            <p>SQL modeling and forecasting work aligned to enterprise planning.</p>
+            <p>
+              <a href="https://github.com/prernajha23-star/enterprise-data-forecasting-strategy"
+                >View work →</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">Skills & Tools</h2>
+        <div class="pill-list">
+          <span class="pill">Product Strategy</span>
+          <span class="pill">Roadmapping</span>
+          <span class="pill">User Research</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Python</span>
+          <span class="pill">Experimentation</span>
+          <span class="pill">Cohort Analysis</span>
+          <span class="pill">KPI Design</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">A/B Testing</span>
+          <span class="pill">Stakeholder Management</span>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Senior Product Manager — Moonglabs Pvt Ltd</h4>
+            <p class="section-subtitle">Aug 2022 – May 2024</p>
+            <p>
+              Owned product vision and roadmap for a high-scale mobile platform, scaling to 10M+
+              users with analytics, experimentation, and cross-functional leadership.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h4>Product & Analytics Roles — 8+ years</h4>
+            <p class="section-subtitle">2011 – 2022</p>
+            <p>
+              Experience across product strategy, growth, and analytics with focus on data-driven
+              decision-making.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">
+          Interested in collaborating? Let’s connect.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Email</h3>
+            <p>jha97@purdue.edu</p>
+          </div>
+          <div class="card">
+            <h3>LinkedIn</h3>
+            <p>
+              <a href="https://www.linkedin.com/in/prernajha23">linkedin.com/in/prernajha23</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3>GitHub</h3>
+            <p>
+              <a href="https://github.com/prernajha23-star">github.com/prernajha23-star</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © 2026 Prerna Jha. Built with GitHub Pages.
+      </footer>
+    </div>
+  </body>
+</html>
