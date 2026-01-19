@@ -11,13 +11,13 @@
     <style>
       :root {
         color-scheme: light;
-        --bg: #0f172a;
-        --card: #0b1220;
-        --text: #e2e8f0;
-        --muted: #94a3b8;
-        --accent: #38bdf8;
-        --accent-2: #22c55e;
-        --border: #1f2937;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #2563eb;
+        --accent-2: #14b8a6;
+        --border: #e2e8f0;
       }
 
       * {
@@ -29,9 +29,9 @@
         font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
           Arial, sans-serif;
         background:
-          radial-gradient(900px 600px at 10% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
-          radial-gradient(800px 500px at 90% 0%, rgba(34, 197, 94, 0.12), transparent 50%),
-          #0b1020;
+          radial-gradient(900px 600px at 10% -10%, rgba(37, 99, 235, 0.12), transparent 60%),
+          radial-gradient(800px 500px at 90% 0%, rgba(20, 184, 166, 0.12), transparent 50%),
+          #f8fafc;
         color: var(--text);
         line-height: 1.6;
       }
@@ -52,13 +52,13 @@
         top: 0;
         z-index: 10;
         backdrop-filter: blur(14px);
-        background: rgba(11, 16, 32, 0.7);
+        background: rgba(248, 250, 252, 0.8);
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 24px;
         padding: 16px 0;
-        border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+        border-bottom: 1px solid var(--border);
       }
 
       .logo {
@@ -97,7 +97,7 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: rgba(56, 189, 248, 0.15);
+        background: rgba(37, 99, 235, 0.12);
         color: var(--accent);
         padding: 8px 14px;
         border-radius: 999px;
@@ -136,19 +136,21 @@
 
       .btn.primary {
         background: var(--accent);
-        color: #0b1220;
+        color: #ffffff;
       }
 
       .btn.secondary {
         border-color: var(--border);
         color: var(--text);
+        background: #ffffff;
       }
 
       .hero-card {
-        background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 0.6));
+        background: linear-gradient(135deg, #ffffff, #f1f5f9);
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 24px;
+        box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
       }
 
       .hero-card p {
@@ -164,10 +166,11 @@
       }
 
       .stat {
-        background: rgba(15, 23, 42, 0.8);
-        border: 1px solid rgba(148, 163, 184, 0.2);
+        background: #ffffff;
+        border: 1px solid var(--border);
         border-radius: 14px;
         padding: 14px 16px;
+        box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
       }
 
       .stat strong {
@@ -201,17 +204,18 @@
       }
 
       .card {
-        background: rgba(15, 23, 42, 0.7);
+        background: #ffffff;
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 20px;
+        box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
         transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       }
 
       .card:hover {
         transform: translateY(-4px);
-        border-color: rgba(56, 189, 248, 0.4);
-        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+        border-color: rgba(37, 99, 235, 0.4);
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
       }
 
       .card h3 {
@@ -231,7 +235,7 @@
       }
 
       .card a:hover {
-        color: #7dd3fc;
+        color: #1d4ed8;
       }
 
       .pill-list {
@@ -241,8 +245,8 @@
       }
 
       .pill {
-        background: rgba(148, 163, 184, 0.2);
-        color: var(--text);
+        background: rgba(37, 99, 235, 0.08);
+        color: #1e293b;
         border-radius: 999px;
         padding: 6px 12px;
         font-size: 13px;
@@ -271,7 +275,7 @@
 
       .section-divider {
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.35), transparent);
+        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.6), transparent);
         margin: 50px 0 0;
       }
 
