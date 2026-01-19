@@ -201,6 +201,7 @@
       .hero-right {
         display: grid;
         gap: 14px;
+        align-content: start;
       }
 
       .glass-card {
@@ -218,6 +219,25 @@
       .glass-card p {
         color: var(--muted);
         margin: 0;
+      }
+
+      .glass-card ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .glass-card li {
+        margin-bottom: 8px;
+      }
+
+      .glass-card a {
+        color: #c7d2fe;
+        font-weight: 600;
+      }
+
+      .glass-card a:hover {
+        color: #f9a8d4;
       }
 
       .hero-stats {
@@ -390,6 +410,12 @@
           align-items: flex-start;
         }
       }
+
+      @media (min-width: 900px) {
+        .hero {
+          grid-template-columns: 1.15fr 0.85fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -473,6 +499,26 @@
               <span class="pill">Design critique</span>
               <span class="pill ghost">Storytelling</span>
             </div>
+          </div>
+          <div class="glass-card">
+            <h3>Featured Projects</h3>
+            <ul>
+              <li>
+                <a href="https://github.com/prernajha23-star/predictive-financial-risk-modeling"
+                  >Predictive Financial Risk Modeling</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/prernajha23-star/enterprise-data-forecasting-strategy"
+                  >Enterprise Data Forecasting & Strategy</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/prernajha23-star/technology-adoption-product-strategy"
+                  >Technology Adoption Product Strategy</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </section>
