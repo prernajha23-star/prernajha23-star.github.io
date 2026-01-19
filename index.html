@@ -10,16 +10,16 @@
     />
     <style>
       :root {
-        color-scheme: light;
-        --bg: #f6f8ff;
-        --card: #ffffff;
-        --text: #111827;
-        --muted: #5b6473;
-        --accent: #4f46e5;
-        --accent-2: #ec4899;
-        --border: #e6eaf2;
-        --glass: rgba(255, 255, 255, 0.7);
-        --shadow: 0 14px 34px rgba(17, 24, 39, 0.08);
+        color-scheme: dark;
+        --bg: #0b1120;
+        --card: #0f172a;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #6366f1;
+        --accent-2: #f472b6;
+        --border: #1f2937;
+        --glass: rgba(15, 23, 42, 0.7);
+        --shadow: 0 16px 36px rgba(2, 6, 23, 0.5);
       }
 
       * {
@@ -31,9 +31,9 @@
         font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
           Arial, sans-serif;
         background:
-          radial-gradient(900px 600px at 5% -10%, rgba(79, 70, 229, 0.2), transparent 60%),
-          radial-gradient(700px 500px at 95% 5%, rgba(236, 72, 153, 0.18), transparent 55%),
-          radial-gradient(800px 500px at 50% 100%, rgba(14, 165, 233, 0.12), transparent 60%),
+          radial-gradient(900px 600px at 5% -10%, rgba(99, 102, 241, 0.25), transparent 60%),
+          radial-gradient(700px 500px at 95% 5%, rgba(244, 114, 182, 0.22), transparent 55%),
+          radial-gradient(800px 500px at 50% 100%, rgba(14, 165, 233, 0.18), transparent 60%),
           var(--bg);
         color: var(--text);
         line-height: 1.6;
@@ -77,30 +77,36 @@
       }
 
       nav a {
+        position: relative;
         color: var(--muted);
         font-size: 14px;
-        padding: 6px 10px;
-        border-radius: 999px;
+        padding: 6px 4px;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        transition: width 0.2s ease;
       }
 
       nav a:hover {
         color: var(--text);
-        background: rgba(79, 70, 229, 0.1);
       }
 
-      .hero {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 32px;
-        align-items: center;
-        padding: 30px 0 60px;
+      nav a:hover::after {
+        width: 100%;
       }
 
       .badge {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: rgba(79, 70, 229, 0.12);
+        background: rgba(99, 102, 241, 0.16);
         color: var(--accent);
         padding: 8px 14px;
         border-radius: 999px;
@@ -109,9 +115,18 @@
       }
 
       h1 {
-        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-size: clamp(2rem, 4vw, 3.4rem);
         margin: 18px 0 16px;
         line-height: 1.1;
+        letter-spacing: -0.6px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 36px;
+        align-items: center;
+        padding: 30px 0 60px;
       }
 
       .lead {
@@ -146,18 +161,27 @@
       .btn.secondary {
         border-color: var(--border);
         color: var(--text);
-        background: #ffffff;
+        background: #0b1326;
       }
 
-      .hero-card {
-        background: linear-gradient(135deg, #ffffff, #f5f7ff);
-        border: 1px solid var(--border);
+      .hero-right {
+        display: grid;
+        gap: 14px;
+      }
+
+      .glass-card {
+        background: linear-gradient(135deg, rgba(17, 24, 39, 0.92), rgba(2, 6, 23, 0.9));
+        border: 1px solid rgba(99, 102, 241, 0.2);
         border-radius: 16px;
-        padding: 24px;
+        padding: 20px;
         box-shadow: var(--shadow);
       }
 
-      .hero-card p {
+      .glass-card h3 {
+        margin: 0 0 8px;
+      }
+
+      .glass-card p {
         color: var(--muted);
         margin: 0;
       }
@@ -170,7 +194,7 @@
       }
 
       .stat {
-        background: #ffffff;
+        background: #0f172a;
         border: 1px solid var(--border);
         border-radius: 14px;
         padding: 14px 16px;
@@ -191,9 +215,26 @@
         margin-top: 60px;
       }
 
+      .section-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 11px;
+        color: var(--accent);
+      }
+
       .section-title {
         font-size: 22px;
-        margin-bottom: 16px;
+        margin: 6px 0 0;
+        letter-spacing: -0.2px;
       }
 
       .section-subtitle {
@@ -208,7 +249,7 @@
       }
 
       .card {
-        background: #ffffff;
+        background: #0f172a;
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 20px;
@@ -218,8 +259,19 @@
 
       .card:hover {
         transform: translateY(-4px);
-        border-color: rgba(79, 70, 229, 0.4);
-        box-shadow: 0 22px 44px rgba(17, 24, 39, 0.14);
+        border-color: rgba(99, 102, 241, 0.5);
+        box-shadow: 0 22px 44px rgba(2, 6, 23, 0.6);
+      }
+
+      .card-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent-2);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        margin-bottom: 10px;
       }
 
       .card h3 {
@@ -239,7 +291,7 @@
       }
 
       .card a:hover {
-        color: #4338ca;
+        color: #a5b4fc;
       }
 
       .pill-list {
@@ -249,11 +301,16 @@
       }
 
       .pill {
-        background: rgba(79, 70, 229, 0.08);
-        color: #1e293b;
+        background: rgba(99, 102, 241, 0.18);
+        color: #e2e8f0;
         border-radius: 999px;
         padding: 6px 12px;
         font-size: 13px;
+      }
+
+      .pill.ghost {
+        background: rgba(148, 163, 184, 0.2);
+        color: var(--muted);
       }
 
       .timeline {
@@ -279,7 +336,7 @@
 
       .section-divider {
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.35), transparent);
+        background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), transparent);
         margin: 50px 0 0;
       }
 
@@ -346,19 +403,40 @@
             </div>
           </div>
         </div>
-        <div class="hero-card">
-          <h3>Focus Areas</h3>
-          <p>
-            Product discovery, user research, KPI design, pricing strategy, cohort analysis,
-            experimentation, and stakeholder alignment.
-          </p>
+        <div class="hero-right">
+          <div class="glass-card">
+            <h3>Focus Areas</h3>
+            <p>
+              Product discovery, user research, KPI design, pricing strategy, cohort analysis,
+              experimentation, and stakeholder alignment.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h3>Collaboration Style</h3>
+            <p>
+              UI/UX partnership, rapid experimentation, and clear product narratives that align
+              teams around measurable outcomes.
+            </p>
+            <div class="pill-list" style="margin-top: 12px">
+              <span class="pill">UX research</span>
+              <span class="pill">Prototyping</span>
+              <span class="pill">Design critique</span>
+              <span class="pill ghost">Storytelling</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <div class="section-divider"></div>
 
       <section id="about">
-        <h2 class="section-title">About</h2>
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Overview</div>
+            <h2 class="section-title">About</h2>
+          </div>
+          <span class="pill ghost">UI/UX-informed product thinking</span>
+        </div>
         <p class="section-subtitle">
           Product and analytics professional focused on translating complex data into clear
           business insights, predictive systems, and strategic recommendations.
@@ -382,12 +460,19 @@
       <div class="section-divider"></div>
 
       <section id="case-studies">
-        <h2 class="section-title">Case Studies</h2>
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Case Studies</div>
+            <h2 class="section-title">Selected Work</h2>
+          </div>
+          <span class="pill ghost">Strategy • Analytics • Growth</span>
+        </div>
         <p class="section-subtitle">
           Outcome-driven projects that show how I approach product strategy and data analysis.
         </p>
         <div class="grid">
           <article class="card">
+            <div class="card-label">Modeling</div>
             <h3>Predictive Financial Risk Modeling</h3>
             <p>
               Built ML models (LightGBM, XGBoost) to assess firm-level risk with emphasis on
@@ -400,6 +485,7 @@
             </p>
           </article>
           <article class="card">
+            <div class="card-label">Forecasting</div>
             <h3>Enterprise Data Forecasting & Strategy</h3>
             <p>
               Used SQL-driven analytics and forecasting to support strategic planning and
@@ -412,6 +498,7 @@
             </p>
           </article>
           <article class="card">
+            <div class="card-label">Product Strategy</div>
             <h3>Technology Adoption Product Strategy</h3>
             <p>
               Case-based analysis of Google Glass and Apple Newton to assess market fit and
@@ -429,9 +516,16 @@
       <div class="section-divider"></div>
 
       <section id="projects">
-        <h2 class="section-title">Projects</h2>
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Projects</div>
+            <h2 class="section-title">Applied Work</h2>
+          </div>
+          <span class="pill ghost">Dashboards • Notebooks • Strategy</span>
+        </div>
         <div class="grid">
           <div class="card">
+            <div class="card-label">Portfolio</div>
             <h3>Analytics & Product Portfolio</h3>
             <p>
               Overview of applied analytics and product strategy projects across ML, forecasting,
@@ -444,6 +538,7 @@
             </p>
           </div>
           <div class="card">
+            <div class="card-label">Notebook</div>
             <h3>Predictive Risk Notebook</h3>
             <p>Jupyter-based modeling workflow using structured financial data.</p>
             <p>
@@ -453,6 +548,7 @@
             </p>
           </div>
           <div class="card">
+            <div class="card-label">Strategy</div>
             <h3>Forecasting & Strategy Assets</h3>
             <p>SQL modeling and forecasting work aligned to enterprise planning.</p>
             <p>
@@ -468,7 +564,13 @@
 
 
       <section id="skills">
-        <h2 class="section-title">Skills & Tools</h2>
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Capabilities</div>
+            <h2 class="section-title">Skills & Tools</h2>
+          </div>
+          <span class="pill ghost">Analytics • Product • UX</span>
+        </div>
         <div class="pill-list">
           <span class="pill">Product Strategy</span>
           <span class="pill">Roadmapping</span>
@@ -487,7 +589,13 @@
       <div class="section-divider"></div>
 
       <section id="experience">
-        <h2 class="section-title">Experience</h2>
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2 class="section-title">Impact Over Time</h2>
+          </div>
+          <span class="pill ghost">Product leadership</span>
+        </div>
         <div class="timeline">
           <div class="timeline-item">
             <h4>Senior Product Manager — Moonglabs Pvt Ltd</h4>
@@ -565,7 +673,13 @@
       <div class="section-divider"></div>
 
       <section id="contact">
-        <h2 class="section-title">Contact</h2>
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2 class="section-title">Let’s Connect</h2>
+          </div>
+          <span class="pill ghost">Open to roles</span>
+        </div>
         <p class="section-subtitle">
           Interested in collaborating? Let’s connect.
         </p>
