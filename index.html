@@ -28,8 +28,10 @@
         margin: 0;
         font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
           Arial, sans-serif;
-        background: radial-gradient(1200px 800px at 10% -10%, #1e293b, #0b1020 60%)
-          no-repeat;
+        background:
+          radial-gradient(900px 600px at 10% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
+          radial-gradient(800px 500px at 90% 0%, rgba(34, 197, 94, 0.12), transparent 50%),
+          #0b1020;
         color: var(--text);
         line-height: 1.6;
       }
@@ -46,11 +48,17 @@
       }
 
       header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(14px);
+        background: rgba(11, 16, 32, 0.7);
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 24px;
-        padding: 16px 0 40px;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.15);
       }
 
       .logo {
@@ -68,10 +76,13 @@
       nav a {
         color: var(--muted);
         font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 999px;
       }
 
       nav a:hover {
         color: var(--text);
+        background: rgba(148, 163, 184, 0.15);
       }
 
       .hero {
@@ -134,7 +145,7 @@
       }
 
       .hero-card {
-        background: rgba(15, 23, 42, 0.6);
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 0.6));
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 24px;
@@ -143,6 +154,30 @@
       .hero-card p {
         color: var(--muted);
         margin: 0;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .stat {
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 14px;
+        padding: 14px 16px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 18px;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 12px;
       }
 
       section {
@@ -170,6 +205,13 @@
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 20px;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(56, 189, 248, 0.4);
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
       }
 
       .card h3 {
@@ -180,6 +222,16 @@
         margin: 0;
         color: var(--muted);
         font-size: 14px;
+      }
+
+      .card a {
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .card a:hover {
+        color: #7dd3fc;
       }
 
       .pill-list {
@@ -215,6 +267,12 @@
         color: var(--muted);
         font-size: 13px;
         text-align: center;
+      }
+
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.35), transparent);
+        margin: 50px 0 0;
       }
 
       @media (max-width: 720px) {
@@ -261,6 +319,24 @@
             >
             <a class="btn secondary" href="#contact">Contact Me</a>
           </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>10M+</strong>
+              <span>Users scaled</span>
+            </div>
+            <div class="stat">
+              <strong>42%</strong>
+              <span>DAU growth</span>
+            </div>
+            <div class="stat">
+              <strong>15%</strong>
+              <span>Retention uplift</span>
+            </div>
+            <div class="stat">
+              <strong>$12K+</strong>
+              <span>Incremental revenue</span>
+            </div>
+          </div>
         </div>
         <div class="hero-card">
           <h3>Focus Areas</h3>
@@ -270,6 +346,8 @@
           </p>
         </div>
       </section>
+
+      <div class="section-divider"></div>
 
       <section id="about">
         <h2 class="section-title">About</h2>
@@ -292,6 +370,8 @@
           </div>
         </div>
       </section>
+
+      <div class="section-divider"></div>
 
       <section id="case-studies">
         <h2 class="section-title">Case Studies</h2>
@@ -338,6 +418,8 @@
         </div>
       </section>
 
+      <div class="section-divider"></div>
+
       <section id="projects">
         <h2 class="section-title">Projects</h2>
         <div class="grid">
@@ -374,6 +456,9 @@
         </div>
       </section>
 
+      <div class="section-divider"></div>
+
+
       <section id="skills">
         <h2 class="section-title">Skills & Tools</h2>
         <div class="pill-list">
@@ -390,6 +475,8 @@
           <span class="pill">Stakeholder Management</span>
         </div>
       </section>
+
+      <div class="section-divider"></div>
 
       <section id="experience">
         <h2 class="section-title">Experience</h2>
@@ -466,6 +553,8 @@
           </div>
         </div>
       </section>
+
+      <div class="section-divider"></div>
 
       <section id="contact">
         <h2 class="section-title">Contact</h2>
