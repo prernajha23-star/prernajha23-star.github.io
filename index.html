@@ -135,6 +135,19 @@
         font-weight: 600;
       }
 
+      .hero-content {
+        display: grid;
+        gap: 16px;
+      }
+
+      .hero-content .badge {
+        width: fit-content;
+      }
+
+      .hero-content .cta {
+        margin-top: 4px;
+      }
+
       h1 {
         font-size: clamp(2rem, 4vw, 3.4rem);
         margin: 18px 0 16px;
@@ -144,9 +157,9 @@
 
       .hero {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 36px;
-        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        align-items: start;
         padding: 30px 0 60px;
       }
 
@@ -211,7 +224,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 12px;
-        margin-top: 20px;
+        margin-top: 6px;
       }
 
       .stat {
@@ -267,6 +280,7 @@
         display: grid;
         gap: 18px;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        align-items: stretch;
       }
 
       .card {
@@ -339,6 +353,15 @@
         gap: 18px;
       }
 
+      .timeline ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+
+      .timeline li {
+        margin-bottom: 8px;
+      }
+
       .timeline-item {
         border-left: 2px solid var(--accent-2);
         padding-left: 16px;
@@ -384,7 +407,7 @@
       </header>
 
       <section class="hero">
-        <div>
+        <div class="hero-content">
           <div class="avatar" aria-label="Prerna Jha">
             <img
               src="https://raw.githubusercontent.com/prernajha23-star/prernajha23-star.github.io/main/ChatGPT%20Image%20Dec%2027%2C%202025%2C%2004_48_02%20PM.png"
